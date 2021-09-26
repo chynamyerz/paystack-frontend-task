@@ -8,18 +8,17 @@ The project structure is a s follows:
 
 - src : The main folder which contains almost the entire project files
 - src/api : The main folder which contains everything responsible for any backend / api calls
-- src/api/**tests** : The main folder which contains everything responsible for testing
 - src/components : The main folder responsible for the building blocks that can be shared and reused as components if various places
 - src/pages : The main folder that combines components to form single pages.
 
-In each folder, a `index.tsx or index.ts` file is used to form a free redundant importing of files, making the imports much more organized.
+In each folder, a `index.tsx or index.ts` file is used to form a free redundant importing of files, making the imports much more organized. Alos a folder `__tests__` with test file is placed close to the relevant code to be tested.
 
 ```
 src|
   api|
-    get|
+    queries|
       movies:
-        __tests))
+        __tests__
           movies.ts
         movies.ts
         index.ts
@@ -30,11 +29,15 @@ src|
         Dropdown.tsx
       Dropdown.tsx
       index.tsx
+      types.ts
+      styles.css / ts
     Table|
       __tests__
         Table.tsx
       Tables.tsx
       index.tsx
+      types.ts
+      styles.css / ts
     index.ts
   pages|
     HomePage|
@@ -42,6 +45,8 @@ src|
         HomePage.tsx
       HomePage.tsx
       index.tsx
+      types.ts
+      styles.css / ts
     index.ts
 ```
 
